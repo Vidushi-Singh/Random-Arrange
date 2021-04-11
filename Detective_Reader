@@ -1,0 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.ex.it;
+import java.io.FileInputStream;
+import java.io.IOException;
+/**
+ *
+ * @author DELL
+ */
+public class Detective_Reader {
+    public static void main(String[] args) {
+        int i;
+        char c;
+        try(FileInputStream fin=new FileInputStream("E:///Ever//BMexpress.txt"))
+        {
+            while((i=fin.read()) !=-1)
+            {
+                c=(char)i;
+                System.out.print(c);//i can hear you
+            }
+        }
+        catch(IOException ex)
+        {
+            System.out.println(ex);
+        }
+    }
+}
